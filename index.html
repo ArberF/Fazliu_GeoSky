@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GeoSky</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- GSAP (with optional ScrollTrigger) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Smooth Scrolling -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-blue-100 text-blue-900">
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between p-6 bg-white shadow-md fixed top-0 left-0 w-full z-50">
+    <!-- Logo / Title -->
+    <div class="flex items-center">
+      <h1 class="text-2xl font-extrabold text-blue-700">GeoSky</h1>
+    </div>
+
+    <!-- Navigation Menu -->
+    <ul class="hidden md:flex space-x-6 text-lg">
+      <li><a href="#about" class="hover:text-blue-600 transition-colors">About</a></li>
+      <li><a href="#team" class="hover:text-blue-600 transition-colors">Team</a></li>
+      <li><a href="#products" class="hover:text-blue-600 transition-colors">Products</a></li>
+      <li><a href="#applications" class="hover:text-blue-600 transition-colors">Applications</a></li>
+      <li><a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a></li>
+    </ul>
+
+    <!-- Language / Other Buttons (Optional) -->
+    <div>
+      <button class="text-lg font-semibold text-blue-700 hover:text-blue-600">EN</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header 
+    class="relative flex items-center justify-center h-screen bg-blue-500 text-white text-center overflow-hidden"
+    style="background: url('YOUR_HERO_IMAGE_URL_HERE') no-repeat center center/cover;"
+  >
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <div class="relative z-10 max-w-4xl px-4">
+      <h2 
+        id="hero-title" 
+        class="text-4xl md:text-5xl font-bold mb-4 opacity-0 -translate-y-5 drop-shadow-md"
+      >
+      The Ultimate Trio: Geodesy, Photogrammetry, and LiDAR for Smarter Digital Inspection"
+      </h2>
+      <p class="text-lg md:text-1xl font-light mb-8 mx-auto max-w-2xl">
+        At GeoSky, we turn data into actionable insights. Using cutting-edge drone technology, we deliver precise solutions for Industry, Infrastructure, Energy, and more. From Digital Terrain Models (DTM) and Digital Surface Models (DSM) to classified point clouds, we create accurate, customizable digital terrain replicas.
+
+        We also specialize in bridge and infrastructure inspections, offering detailed, non-invasive assessments to ensure safety and efficiency. Whether planning, monitoring, or optimizing, our advanced models and inspections provide the clarity you need to make smarter decisions.
+        
+        At GeoSky, we’re building the future—one pixel-perfect point at a time.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a
+          href="#applications"
+          class="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition duration-200"
+        >
+          Explore Applications
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="pt-16 pb-16 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-4xl font-semibold text-blue-700 mb-8">About</h3>
+      <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+        Welcome to GeoSky – Innovating Geodesy, Photogrammetry, and Drone Solutions
+
+        At GeoSky, we are a pioneering company committed to transforming the world of geodesy, photogrammetry, and drone technology. By leveraging cutting-edge drone systems and advanced measurement techniques, we specialize in delivering high-precision point clouds and detailed photogrammetric data that support industries ranging from construction and agriculture to environmental monitoring and urban planning.
+        
+        Our team of experts utilizes the latest drone technology combined with state-of-the-art software to capture, analyze, and visualize spatial data with exceptional accuracy. Whether you're looking to create 3D models, generate topographic maps, or perform detailed terrain analysis, GeoSky provides the tools and expertise to make it happen.
+        
+        We pride ourselves on our commitment to excellence, offering fast, reliable, and cost-effective solutions tailored to your needs. With GeoSky, you can trust that your project is in capable hands, helping you make informed decisions based on high-quality, real-world data.
+        
+        Join us on our journey as we continue to explore new heights in the fields of geodesy, photogrammetry, and drone technology. Let us help you unlock the potential of your data and bring your projects to life with unparalleled precision.
+        
+        GeoSky – Soaring above the ordinary, delivering precision like never before.
+      </p>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+<section id="team" class="pt-16 pb-16 bg-white">
+  <div class="container mx-auto px-4 text-center">
+    <h3 class="text-4xl font-semibold text-blue-700 mb-4">Meet Our Team</h3>
+    <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+      Our team is the backbone of GeoSky—a group of passionate professionals specializing in geodesy, photogrammetry, drone technology, and communication. With a shared commitment to precision and innovation, we bring together diverse expertise to deliver cutting-edge solutions for every challenge.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+      <!-- Arber Fazliu -->
+      <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <img
+          src="images/arber-fazliu.jpg"
+          alt="Arber Fazliu"
+          class="mx-auto mb-4 w-32 h-32 rounded-full object-cover"
+        />
+        <h4 class="text-2xl font-bold text-blue-700 mb-2">Arber Fazliu</h4>
+        <p class="text-gray-600 font-semibold mb-4">CEO & Co-Founder</p>
+        <p class="text-gray-600 text-left">
+          Arber Fazliu is a visionary leader with a Diplom Ingenieur degree from TU Wien. He specializes in geodesy, photogrammetry, and drone technology, bringing years of experience in wind energy infrastructure and 3D modeling. His expertise ensures GeoSky delivers high-precision solutions for industries worldwide.
+        </p>
+        <a
+          href="arber-fazliu.html"
+          class="inline-block mt-4 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-200"
+        >
+          Learn More
+        </a>
+      </div>
+
+      <!-- Arbra Kraja -->
+      <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <img
+          src="images/arbra-kraja.jpg"
+          alt="Arbra Kraja"
+          class="mx-auto mb-4 w-32 h-32 rounded-full object-cover"
+        />
+        <h4 class="text-2xl font-bold text-blue-700 mb-2">Arbra Kraja</h4>
+        <p class="text-gray-600 font-semibold mb-4">CEO & Co-Founder</p>
+        <p class="text-gray-600 text-left">
+          Arbra Kraja holds a Diplom Ingenieur degree in Electrical Engineering from TU Wien. With extensive experience in energy infrastructure and project management, she ensures operational excellence and innovation at GeoSky. Her leadership drives the company's success in delivering cutting-edge solutions.
+        </p>
+        <a
+          href="arbra-kraja.html"
+          class="inline-block mt-4 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-200"
+        >
+          Learn More
+        </a>
+      </div>
+
+      <!-- Rozafe Rexhepaj -->
+      <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <img
+          src="images/rozafe-rexhepaj.jpg"  <!-- Rruga relative për foto -->
+          alt="Rozafe Rexhepaj"
+          class="mx-auto mb-4 w-32 h-32 rounded-full object-cover"
+        />
+        <h4 class="text-2xl font-bold text-blue-700 mb-2">Rozafe Rexhepaj</h4>
+        <p class="text-gray-600 font-semibold mb-4">PR & Communication Specialist</p>
+        <p class="text-gray-600 text-left">
+          Rozafe Rexhepaj holds a Master's degree in Communication from the University of Vienna. With a strong background in public relations and strategic communication, Rozafe ensures that GeoSky's message reaches the right audience, building strong relationships with clients and stakeholders. Her expertise in crafting compelling narratives and managing media relations plays a key role in enhancing GeoSky's brand presence.
+        </p>
+        <a
+          href="rozafe-rexhepaj.html"  <!-- Lidhja për faqen e saj -->
+          class="inline-block mt-4 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-200"
+        >
+          Learn More
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Products Section -->
+  <section id="products" class="pt-16 pb-16 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-4xl font-semibold text-blue-700 mb-8">Our Products</h3>
+      <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+        At GeoSky, we deliver cutting-edge geospatial solutions tailored to your needs. Our products are designed to provide precision, efficiency, and actionable insights for a wide range of industries. Explore our offerings:
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        <!-- DTM -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <h4 class="text-2xl font-bold text-blue-700 mb-4">Digital Terrain Models (DTM)</h4>
+          <p class="text-gray-600 text-left">
+            Our high-resolution Digital Terrain Models (DTM) provide accurate representations of the bare earth surface, excluding buildings, vegetation, and other above-ground features. Ideal for topographic mapping, flood modeling, and infrastructure planning.
+          </p>
+        </div>
+
+        <!-- DSM -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <h4 class="text-2xl font-bold text-blue-700 mb-4">Digital Surface Models (DSM)</h4>
+          <p class="text-gray-600 text-left">
+            Digital Surface Models (DSM) capture the earth's surface, including all natural and man-made features. Perfect for urban planning, 3D visualization, and environmental monitoring.
+          </p>
+        </div>
+
+        <!-- Tiled Models -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <h4 class="text-2xl font-bold text-blue-700 mb-4">Tiled Models</h4>
+          <p class="text-gray-600 text-left">
+            Our tiled models offer seamless, high-detail 3D representations of large areas. Optimized for performance, they are ideal for GIS applications, virtual simulations, and large-scale project planning.
+          </p>
+        </div>
+
+        <!-- Orthophotos -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <h4 class="text-2xl font-bold text-blue-700 mb-4">Orthophotos</h4>
+          <p class="text-gray-600 text-left">
+            Georeferenced and distortion-free, our orthophotos provide a true-to-scale aerial view of the terrain. Essential for mapping, land use analysis, and cadastral surveys.
+          </p>
+        </div>
+
+        <!-- Point Cloud -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <h4 class="text-2xl font-bold text-blue-700 mb-4">Point Cloud</h4>
+          <p class="text-gray-600 text-left">
+            Our classified point clouds deliver precise 3D data for complex environments. Used in construction, forestry, and heritage preservation, they provide unmatched accuracy for detailed analysis.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications Section -->
+  <section id="applications" class="pt-16 pb-16 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-4xl font-semibold text-blue-700 mb-8">Applications</h3>
+      <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+        Our solutions are applied across a wide range of industries, delivering precision and efficiency to meet your unique needs. Explore how GeoSky can transform your projects:
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        <!-- Construction Industry -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <h4 class="text-2xl font-bold text-blue-700 mb-4">Construction Industry</h4>
+          <p class="text-gray-600 text-left">
+            From site planning to progress monitoring, our geospatial solutions streamline construction processes, ensuring accuracy and efficiency at every stage.
+          </p>
+        </div>
+
+        <!-- Energy and Infrastructure -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <h4 class="text-2xl font-bold text-blue-700 mb-4">Energy and Infrastructure</h4>
+          <p class="text-gray-600 text-left">
+            We provide detailed inspections and monitoring for energy infrastructure, ensuring safety, reliability, and optimal performance.
+          </p>
+        </div>
+
+        <!-- Urbanization and City Planning -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <h4 class="text-2xl font-bold text-blue-700 mb-4">Urbanization and City Planning</h4>
+          <p class="text-gray-600 text-left">
+            Our solutions support urban development with accurate 3D models, helping planners design smarter, more sustainable cities.
+          </p>
+        </div>
+
+        <!-- Environment and Natural Resources -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <h4 class="text-2xl font-bold text-blue-700 mb-4">Environment and Natural Resources</h4>
+          <p class="text-gray-600 text-left">
+            From forest management to water resource monitoring, our tools provide critical insights for environmental conservation and resource management.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+<section id="contact" class="pt-16 pb-16 bg-white">
+  <div class="container mx-auto px-4 text-center">
+    <h3 class="text-4xl font-semibold text-blue-700 mb-8">Contact</h3>
+    <p class="max-w-3xl mx-auto text-lg leading-relaxed mb-8">
+      Have questions or need more information? Feel free to reach out to us. We're here to help!
+    </p>
+    <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+      <div class="text-left">
+        <h4 class="text-2xl font-bold text-blue-700 mb-4">Arber Fazliu</h4>
+        <p class="text-gray-600 mb-2">
+          <strong>Email:</strong> 
+          <a href="mailto:fazliu.arber@hotmail.com" class="text-blue-600 hover:text-blue-800">
+            fazliu.arber@hotmail.com
+          </a>
+        </p>
+        <p class="text-gray-600 mb-2">
+          <strong>Phone:</strong> 
+          <a href="tel:+436763662950" class="text-blue-600 hover:text-blue-800">
+            +43 676 3662 950
+          </a>
+        </p>
+        <p class="text-gray-600 mb-2">
+          <strong>Location:</strong> Vienna, Austria
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-900 text-white text-center mt-16">
+    <p>&copy; 2025 Dipl-Ing. Arber Fazliu. All rights reserved.</p>
+  </footer>
+
+  <!-- GSAP Animations -->
+  <script>
+    // Register ScrollTrigger for animations on scroll
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animate Hero Title
+    gsap.to("#hero-title", {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      delay: 0.3
+    });
+
+    // Example fade-up effect for each section
+    const sectionsToAnimate = [
+      "#about",
+      "#team",
+      "#products",
+      "#applications",
+      "#contact"
+    ];
+
+    sectionsToAnimate.forEach((selector) => {
+      gsap.from(selector + " h3, " + selector + " p, " + selector + " div, " + selector + " a, " + selector + " img", {
+        scrollTrigger: {
+          trigger: selector,
+          start: "top bottom"
+        },
+        opacity: 0,
+        y: 30,
+        duration: 1,
+        stagger: 0.1
+      });
+    });
+
+    // Simple Form Validation/Submit
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      let name = document.getElementById("name").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let message = document.getElementById("message").value.trim();
+
+      if (name === "" || email === "" || message === "") {
+        alert("Please fill in all fields.");
+      } else {
+        document.getElementById("form-status").classList.remove("hidden");
+        this.reset();
+      }
+    });
+  </script>
+</body>
+</html>
